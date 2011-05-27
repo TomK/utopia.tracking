@@ -28,7 +28,7 @@ class module_Tracking extends uListDataModule {
 
 	public function SetupParents() {
 		$this->RegisterAjax('track',array($this,'track'));
-		$this->AddParent('/');
+		$this->AddParent('internalmodule_Admin');
 
 		uJavascript::IncludeText('$.ajax({type:\'post\',data:{"__ajax":"track","r":document.referrer}});');
 	}
