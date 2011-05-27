@@ -30,7 +30,7 @@ class module_Tracking extends uListDataModule {
 		$this->RegisterAjax('track',array($this,'track'));
 		$this->AddParent('/');
 
-		uJavascript::IncludeText('$.ajax(\'\',{type:\'post\',data:{"__ajax":"track","r":document.referrer}});');
+		uJavascript::IncludeText('$.ajax({type:\'post\',data:{"__ajax":"track","r":document.referrer}});');
 	}
 
 	public function SetupFields() {
